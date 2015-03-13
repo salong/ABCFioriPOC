@@ -1,5 +1,6 @@
 <mvc:View controllerName="EPMDemo.view.Detail" xmlns="sap.m"
-	xmlns:form="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+	xmlns:form="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="{i18n>DETAIL_TITLE}" class="sapUiFioriObjectPage"
 		showNavButton="{device>/isPhone}" navButtonPress="handleNavButtonPress">
 
@@ -26,7 +27,7 @@
 			</items>
 		</IconTabBar>
 
-		<Table id="soList" items="{path:'ToSalesOrders'}" growing="true" growingThreshold="10">
+		<Table id="soList" items="{path:'SalesOrders'}" growing="true" growingThreshold="10">
 			<headerToolbar>
 				<Toolbar>
 					<Label text="{i18n>DETAIL_SOTABLE}" />
@@ -68,6 +69,8 @@
 				</cells>
 			</ColumnListItem>
 		</Table>
+		
+		<html:div id="sample1"></html:div>
 
 		<footer>
 			<Bar>

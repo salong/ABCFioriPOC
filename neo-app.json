@@ -5,10 +5,10 @@
       "path": "/sap/opu/odata",
       "target": {
         "type": "destination",
-        "name": "N73",
+        "name": "SAL",
         "entryPath": "/sap/opu/odata"
       },
-      "description": "N73 - AGS Gateway"
+      "description": "SAL on usphlvmags02"
     },
     {
       "path": "/resources",

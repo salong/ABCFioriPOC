@@ -5,7 +5,7 @@
 		<subHeader>
 			<Bar>
 				<contentMiddle>
-					<SearchField id="searchField" showRefreshButton="{device>/isNoTouch}"
+					<SearchField id="searchCustomerField" showRefreshButton="{device>/isNoTouch}"
 						placeholder="{i18n>MASTER_SEARCH_PLACEHOLDER}" search="handleSearch"
 						tooltip="{i18n>MASTER_SEARCH_TOOLTIP}" width="100%">
 					</SearchField>

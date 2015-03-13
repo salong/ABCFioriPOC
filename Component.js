@@ -16,9 +16,8 @@ sap.ui.core.UIComponent.extend("EPMDemo.Component", {
 			"titleResource" : "SHELL_TITLE",
 			
 			"serviceConfig" : {
-				//http://dewdfgwp00993.wdf.sap.corp:6200/sap/opu/odata/sap/ZAGS_GW100_EPM_DEMO_SRV/
-				name: "ZAGS_GW100_EPM_DEMO_SRV",
-				serviceUrl: "/sap/opu/odata/sap/ZAGS_GW100_EPM_DEMO_SRV/"
+				name: "ZGW100_00_EPM_SRV",
+				serviceUrl: "/sap/opu/odata/sap/ZGW100_00_EPM_SRV/"
 			}
 		},
 

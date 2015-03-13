@@ -38,12 +38,22 @@ sap.ui.core.mvc.Controller.extend("EPMDemo.view.Master", {
 						oList.setSelectedItem(aItems[i], true);
 						break;
 					}
-				}	
+				}
+				//alert("item not found in master list");
 			}	
 
 		}, this));
 		
 	},
+	
+    handleSearch : function(oEvent)  {
+        var hint = oEvent.getParameter("query");//this.getView().byId("searchCustomerField").value;
+       // alert("searching: ["+hint+"]");
+        var filters = [new sap.ui.model.Filter("CompanyName", sap.ui.model.FilterOperator.Contains, hint)];
+        var list = this.getView().byId("list");
+        var binding = list.getBinding("items");
+        binding.filter(filters);
+    },
 	
 	selectDetail : function() {
 		if (!sap.ui.Device.system.phone) {
