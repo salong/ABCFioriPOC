@@ -1,0 +1,13 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <ViewSettingsDialog
+    confirm="handleConfirm">
+    <sortItems>
+      <ViewSettingsItem text="SoID" key="SoID" selected="true" />
+      <ViewSettingsItem text="Buyer Name" key="BuyerName" />
+      <ViewSettingsItem text="BuyerId" key="BuyerId" />
+      <ViewSettingsItem text="GrossAmount" key="Amount" />
+    </sortItems>
+  </ViewSettingsDialog>
+</core:FragmentDefinition>

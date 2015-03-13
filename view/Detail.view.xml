@@ -1,0 +1,77 @@
+<mvc:View controllerName="EPMDemo.view.Detail" xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+	<Page title="{i18n>DETAIL_TITLE}" class="sapUiFioriObjectPage"
+		showNavButton="{device>/isPhone}" navButtonPress="handleNavButtonPress">
+
+		<ObjectHeader id="header" title="{CompanyName}" number="{BpId}">
+			<attributes>
+				<ObjectAttribute title="{i18n>DETAIL_ADDRESS}" text="{Street} {City} {Country}" />
+				<ObjectAttribute title="{i18n>DETAIL_EMAIL}" text="{EmailAddress}" />
+			</attributes>
+		</ObjectHeader>
+
+		<IconTabBar expanded="false">
+			<items>
+				<IconTabFilter id="iconTabFilter" icon="sap-icon://hint">
+					<form:SimpleForm minWidth="1024">
+						<core:Title text="More Details" />
+						<Label id="label1" text="" />
+						<Text id="text1" text="" />
+						<Label id="label2" text="" />
+						<Text id="text2" text="" />
+						<Label id="label3" text="" />
+						<Text id="text3" text="" />
+					</form:SimpleForm>
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+
+		<Table id="soList" items="{path:'ToSalesOrders'}" growing="true" growingThreshold="10">
+			<headerToolbar>
+				<Toolbar>
+					<Label text="{i18n>DETAIL_SOTABLE}" />
+					<ToolbarSpacer />
+					<Button id="lineItemViewButton" icon="sap-icon://drop-down-list"
+						press="handleLineItemViewChange" />
+				</Toolbar>
+			</headerToolbar>
+			<columns>
+				<Column>
+					<header>
+						<Label text="SoID" />
+					</header>
+				</Column>
+				<Column width="4em" minScreenWidth="Tablet" demandPopin="true"
+					hAlign="Center">
+					<header>
+						<Label text="BuyerName" />
+					</header>
+				</Column>
+				<Column width="7em" minScreenWidth="Tablet" demandPopin="true"
+					hAlign="Center">
+					<header>
+						<Label text="BuyerId" />
+					</header>
+				</Column>
+				<Column hAlign="Right">
+					<header>
+						<Label text="GrossAmount" />
+					</header>
+				</Column>
+			</columns>
+			<ColumnListItem type="Navigation" press="handleLineItemPress">
+				<cells>
+					<ObjectIdentifier title="{SoId}" />
+					<Text text="{BuyerName}" />
+					<Text text="{BuyerId}" />
+					<ObjectNumber number="{GrossAmount}" />
+				</cells>
+			</ColumnListItem>
+		</Table>
+
+		<footer>
+			<Bar>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>
